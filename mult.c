@@ -35,15 +35,23 @@ unsigned int mult2(unsigned int x, unsigned int y)
     unsigned result = 0;
     unsigned int multiplicand = x;
     unsigned int multiplier = y;
-
-
+    int passes = 0;
+    while (passes <= 31 && multiplier > 0) { // only allows for up to 31
+        //if ((multiplier&1) == 1) {
+            result = result + multiplicand;
+        //}
+        multiplier = multiplier >> 1;
+        multiplicand = multiplicand << 1;
+        passes++;
+        //printf("   DEBUG: %d\n", passes);
+    }/*
     for (int i=0; i<32; i++) {
         if ((multiplier&1) == 1) {
             result = result + multiplicand;
         }
         multiplier = multiplier >> 1;
         multiplicand = multiplicand << 1;
-    }
+    }*/
     return result;
 }
 
@@ -78,6 +86,18 @@ int main()
     printf("%dx%d=%d: mult(%d,%d)=%d\n",i,j,i*j,i,j,mult(i,j));
     printf("%dx%d=%d: mult2(%d,%d)=%d\n",i,j,i*j,i,j,mult2(i,j));
 
+    //other test cases
+/*
+     i=2;
+     j=3;
+    printf("%dx%d=%d: mult(%d,%d)=%d\n",i,j,i*j,i,j,mult(i,j));
+    printf("%dx%d=%d: mult2(%d,%d)=%d\n",i,j,i*j,i,j,mult2(i,j));
+
+    i=777;
+    j=456;
+    printf("%dx%d=%d: mult(%d,%d)=%d\n",i,j,i*j,i,j,mult(i,j));
+    printf("%dx%d=%d: mult2(%d,%d)=%d\n",i,j,i*j,i,j,mult2(i,j));
+*/
     unsigned int x=3;
     unsigned int p=100000000;
     unsigned int m=53;
