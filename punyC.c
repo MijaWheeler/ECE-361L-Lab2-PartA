@@ -31,7 +31,7 @@ char instr[PROG_MEM_SIZE];
 
 void load_prog1();
 void load_prog2();
-//void run_prog();
+//void run_prog(); //wrong prototype call
 void run_prog(int sim_time);
 
 int main() // originally void
@@ -58,8 +58,9 @@ int get_imm(int n)
 void instr_cycle()
     {
     int ir = MASK_8BITS & (int) (instr[pc]);
-    pc++;
-    int opcode = ir >> 5;
+    pc = (pc + 1 ) & 0x0F; // PC wraps within 4-bit memory bounds (0-15);
+    int opcode = (ir >> 5) & 0x07; //// Extract bits 7, 6, 5
+
     switch(opcode) {
         case ADD:
 	    r[get_bit(ir,4)] = r[get_bit(ir,3)] + r[get_bit(ir,2)];
@@ -87,7 +88,7 @@ void instr_cycle()
             r[get_bit(ir,4)] = pc; // save return address in ra
             pc = ir & 0x0F; // jump to target subroutine address
             break;
-        case RET:
+        case RET: //TODO
             pc = r[get_bit(ir,4)] &  0x0F; //// Step 1: Restore program counter from RA
             break;
         default:
