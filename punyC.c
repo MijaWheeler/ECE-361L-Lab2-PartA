@@ -1,6 +1,7 @@
 /*
  * Compilation:  gcc -Wall -Wextra -std=c99 -g punyC.c -o punyC
  * run: ./punyC
+ * refrence: punycomputer simulator pdf
  */
 
 #include <stdlib.h>
