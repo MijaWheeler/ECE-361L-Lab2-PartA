@@ -1,3 +1,8 @@
+/*
+ * Compilation:  gcc -Wall -Wextra -std=c99 -g punyC.c -o punyC
+ * run: ./punyC
+ */
+
 #include <stdlib.h>
 #include <stdio.h>
 

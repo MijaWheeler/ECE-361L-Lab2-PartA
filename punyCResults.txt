@@ -1,0 +1,83 @@
+Program 1:
+Program:
+instr[ 0]: opcode=2, b[4]=1, b[3..0]=0000,
+instr[ 1]: opcode=2, b[4]=0, b[3..0]=0011,
+instr[ 2]: opcode=4, b[4]=0, b[3..0]=0000,
+instr[ 3]: opcode=0, b[4]=1, b[3..0]=1000,
+instr[ 4]: opcode=1, b[4]=0, b[3..0]=0001,
+instr[ 5]: opcode=3, b[4]=0, b[3..0]=0010,
+instr[ 6]: opcode=0, b[4]=0, b[3..0]=0000,
+instr[ 7]: opcode=0, b[4]=0, b[3..0]=0000,
+instr[ 8]: opcode=0, b[4]=0, b[3..0]=0000,
+instr[ 9]: opcode=0, b[4]=0, b[3..0]=0000,
+instr[10]: opcode=0, b[4]=0, b[3..0]=0000,
+instr[11]: opcode=0, b[4]=0, b[3..0]=0000,
+instr[12]: opcode=0, b[4]=0, b[3..0]=0000,
+instr[13]: opcode=0, b[4]=0, b[3..0]=0000,
+instr[14]: opcode=0, b[4]=0, b[3..0]=0000,
+instr[15]: opcode=0, b[4]=0, b[3..0]=0000,
+Simulation:
+t= 0: pc=0, R0=0, R1=0
+t= 1: pc=1, R0=0, R1=0
+t= 2: pc=2, R0=3, R1=0
+t= 3: pc=3, R0=3, R1=0
+t= 4: pc=4, R0=3, R1=3
+t= 5: pc=5, R0=2, R1=3
+t= 6: pc=2, R0=2, R1=3
+t= 7: pc=3, R0=2, R1=3
+t= 8: pc=4, R0=2, R1=5
+t= 9: pc=5, R0=1, R1=5
+t=10: pc=2, R0=1, R1=5
+t=11: pc=3, R0=1, R1=5
+t=12: pc=4, R0=1, R1=6
+t=13: pc=5, R0=0, R1=6
+t=14: pc=2, R0=0, R1=6
+t=15: pc=0, R0=0, R1=6
+t=16: pc=1, R0=0, R1=0
+t=17: pc=2, R0=3, R1=0
+t=18: pc=3, R0=3, R1=0
+t=19: pc=4, R0=3, R1=3
+
+Program 2:
+Program:
+instr[ 0]: opcode=2, b[4]=1, b[3..0]=0000,
+instr[ 1]: opcode=2, b[4]=0, b[3..0]=0010,
+instr[ 2]: opcode=4, b[4]=0, b[3..0]=0000,
+instr[ 3]: opcode=6, b[4]=0, b[3..0]=0111,
+instr[ 4]: opcode=6, b[4]=0, b[3..0]=0111,
+instr[ 5]: opcode=1, b[4]=0, b[3..0]=0001,
+instr[ 6]: opcode=3, b[4]=0, b[3..0]=0010,
+instr[ 7]: opcode=0, b[4]=1, b[3..0]=1000,
+instr[ 8]: opcode=7, b[4]=0, b[3..0]=0000,
+instr[ 9]: opcode=0, b[4]=0, b[3..0]=0000,
+instr[10]: opcode=0, b[4]=0, b[3..0]=0000,
+instr[11]: opcode=0, b[4]=0, b[3..0]=0000,
+instr[12]: opcode=0, b[4]=0, b[3..0]=0000,
+instr[13]: opcode=0, b[4]=0, b[3..0]=0000,
+instr[14]: opcode=0, b[4]=0, b[3..0]=0000,
+instr[15]: opcode=0, b[4]=0, b[3..0]=0000,
+Simulation:
+t= 0: pc=0, R0=0, R1=0
+t= 1: pc=1, R0=0, R1=0
+t= 2: pc=2, R0=2, R1=0
+t= 3: pc=3, R0=2, R1=0
+t= 4: pc=7, R0=2, R1=0
+t= 5: pc=8, R0=2, R1=2
+t= 6: pc=4, R0=2, R1=2
+t= 7: pc=7, R0=2, R1=2
+t= 8: pc=8, R0=2, R1=4
+t= 9: pc=5, R0=2, R1=4
+t=10: pc=6, R0=1, R1=4
+t=11: pc=2, R0=1, R1=4
+t=12: pc=3, R0=1, R1=4
+t=13: pc=7, R0=1, R1=4
+t=14: pc=8, R0=1, R1=5
+t=15: pc=4, R0=1, R1=5
+t=16: pc=7, R0=1, R1=5
+t=17: pc=8, R0=1, R1=6
+t=18: pc=5, R0=1, R1=6
+t=19: pc=6, R0=0, R1=6
+t=20: pc=2, R0=0, R1=6
+t=21: pc=0, R0=0, R1=6
+t=22: pc=1, R0=0, R1=0
+t=23: pc=2, R0=2, R1=0
