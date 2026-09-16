@@ -85,11 +85,11 @@ void instr_cycle()
 	    }
             break;
         case CALL: //TODO: Call address type A
-            r[get_bit(ir,4)] = pc; // save return address in ra
+            ra = pc; // save return address in ra
             pc = ir & 0x0F; // jump to target subroutine address
             break;
         case RET: //TODO
-            pc = r[get_bit(ir,4)] &  0x0F; //// Step 1: Restore program counter from RA
+            pc = ra &  0x0F; //// Step 1: Restore program counter from RA
             break;
         default:
 	    printf("Invalid instruction!\n");
