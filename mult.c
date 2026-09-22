@@ -30,7 +30,7 @@ unsigned int mult(unsigned int x, unsigned int y)
 * but can also take a smaller number of passes. For example, if the function is supposed to multiply
 * 2 x 3 then the while-loop will take 1 or 2 passes while the for-loop will take 31 passes.
  */
-unsigned int mult2(unsigned int x, unsigned int y)
+unsigned int mult2(unsigned int x, unsigned int y) // Done need to check results
 {
     unsigned result = 0;
     unsigned int multiplicand = x;
@@ -68,14 +68,21 @@ unsigned int powMod(unsigned int x, unsigned int p, unsigned int m)
 /*
 * TODO: The number of multiplies that it computes is p, the power value.
 *  So if p = 100000000, powMod2() executes 100 million multiples. Change powMod2() so it
-*  does at most 64 multiplies. The following are some hints.
+*  does at most 64 multiplies.
  */
 unsigned int powMod2(unsigned int x, unsigned int p, unsigned int m)
-{
+{//need to use binary
     unsigned int result = 1;
-    for (unsigned int i = 0; i<p; i++) {
+    unsigned int multiples = 0;
+    while (multiples < 64 && multiples <= p) {
+        //for (unsigned int i = 0; i<p; i++) {
         result = (result * x) % m;
+        multiples++;
+        printf("   DEBUG: %d\n", multiples);
+
+        //
     }
+
     return result;
 }
 
