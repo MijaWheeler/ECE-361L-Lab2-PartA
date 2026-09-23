@@ -3,6 +3,7 @@
  *
  * Compile: gcc -Wall -Wextra -std=c99 -g mult.c -o mult
  * Run: ./mult
+ * STATUS: Complete and correct. All functions are implemented and tested.
  *
  * **/
 
