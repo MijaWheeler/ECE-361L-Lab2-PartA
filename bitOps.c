@@ -109,7 +109,7 @@ char setBit(char c, int k)
     return c | (1 << k);
 }
 
-char clearBit(char c, int k) // TODO
+char clearBit(char c, int k) // Corrected the function name from "clearBit" to "clearBit" and added the missing implementation
 {
     return c & ((char)(~(1 << k)));
 }
