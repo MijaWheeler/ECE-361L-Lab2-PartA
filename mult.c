@@ -65,17 +65,20 @@ unsigned int powMod(unsigned int x, unsigned int p, unsigned int m)
  *  does at most 64 multiplies.
  */
 unsigned int powMod2(unsigned int x, unsigned int p, unsigned int m)
-{ // need to use binary
+{ // Done, results are correct
     unsigned int result = 1;
-    unsigned int multiples = 0;
-    while (multiples < 64 && multiples <= p)
+    unsigned int base = x % m;
+    int i = 0; // Counter for the number of multiplications
+    while (p != 0)
     {
-        // for (unsigned int i = 0; i<p; i++) {
-        result = (result * x) % m;
-        multiples++;
-        // printf("   DEBUG: %d\n", multiples);
+        if (p & 1)
+        {
+            result = (result * base) % m;
+            // printf("   DEBUG: %d\n", i); i++;
+        }
+        base = (base * base) % m;
+        p = p >> 1;
     }
-
     return result;
 }
 
